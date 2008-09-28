@@ -27,7 +27,7 @@ This package contains the OGRE CgProgramManager plugin.
 
 
 %prep
-%setup -q -n ogre
+%setup -q -n ogrenew
 %patch0 -p1
 
 # Rebuilding autotools-generated files
