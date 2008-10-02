@@ -1,6 +1,6 @@
 Name:           ogre-cg
-Version:        1.4.9
-Release:        2%{?dist}
+Version:        1.6.0
+Release:        0.1.rc1%{?dist}
 Summary:        Object-Oriented Graphics Rendering Engine
 License:        LGPLv2+
 Group:          System Environment/Libraries
@@ -9,7 +9,7 @@ URL:            http://www.ogre3d.org/
 # stripped all except CgProgramManager plugin and core files needed to build it
 Source0:        ogre-%{version}-cg.tar.bz2
 # Patch striping everything except CgProgramManager from compilation
-Patch0:         ogre-1.4.9-cg.patch
+Patch0:         ogre-1.6.0-cg.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  zziplib-devel libXaw-devel libXrandr-devel libXxf86vm-devel
 BuildRequires:  autoconf automake libtool
@@ -64,5 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Oct  2 2008 Alexey Torkhov <atorkhov@gmail.com> 1.6.0-0.1.rc1
+- New upstream release 1.6.0rc1
+
 * Sun Jul 13 2008 Alexey Torkhov <atorkhov@gmail.com> 1.4.9-2
 - Packaged OGRE 1.4.9 Cg plugin basing on Fedora package by Hans de Goede.
