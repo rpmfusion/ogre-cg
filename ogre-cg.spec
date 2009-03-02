@@ -1,6 +1,6 @@
 Name:           ogre-cg
-Version:        1.6.0
-Release:        0.1.rc1%{?dist}
+Version:        1.6.1
+Release:        1%{?dist}
 Summary:        Object-Oriented Graphics Rendering Engine
 License:        LGPLv2+
 Group:          System Environment/Libraries
@@ -9,16 +9,16 @@ URL:            http://www.ogre3d.org/
 # stripped all except CgProgramManager plugin and core files needed to build it
 Source0:        ogre-%{version}-cg.tar.bz2
 # Patch striping everything except CgProgramManager from compilation
-Patch0:         ogre-1.6.0-cg.patch
+Patch0:         ogre-1.6.1-cg.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  zziplib-devel libXaw-devel libXrandr-devel libXxf86vm-devel
 BuildRequires:  autoconf automake libtool
 
 # We are building only plugin, so we need main lib
-BuildRequires:  ogre-devel
+BuildRequires:  ogre-devel = %{version}
 # Cg package
 BuildRequires:  Cg
-ExclusiveArch:  i386 x86_64
+ExclusiveArch:  %{ix86} x86_64
 
 Requires:       ogre = %{version}
 
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Mar 02 2009 Alexey Torkhov <atorkhov@gmail.com> - 1.6.1-1
+- New OGRE release 1.6.1
+
 * Thu Oct  2 2008 Alexey Torkhov <atorkhov@gmail.com> 1.6.0-0.1.rc1
 - New upstream release 1.6.0rc1
 
