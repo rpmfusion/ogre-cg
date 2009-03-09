@@ -18,7 +18,7 @@ BuildRequires:  autoconf automake libtool
 BuildRequires:  ogre-devel = %{version}
 # Cg package
 BuildRequires:  Cg
-ExclusiveArch:  %{ix86} x86_64
+ExclusiveArch:  i586 x86_64
 
 Requires:       ogre = %{version}
 
