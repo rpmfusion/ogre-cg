@@ -1,6 +1,6 @@
 Name:           ogre-cg
 Version:        1.6.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Object-Oriented Graphics Rendering Engine
 License:        LGPLv2+
 Group:          System Environment/Libraries
@@ -18,7 +18,7 @@ BuildRequires:  autoconf automake libtool
 BuildRequires:  ogre-devel = %{version}
 # Cg package
 BuildRequires:  Cg
-ExclusiveArch:  i586 x86_64
+ExclusiveArch:  i686 x86_64
 
 Requires:       ogre = %{version}
 
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Sep 30 2009 Alexey Torkhov <atorkhov@gmail.com> - 1.6.1-3
+- Rebuild for F12
+
 * Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.6.1-2
 - rebuild for new F11 features
 
