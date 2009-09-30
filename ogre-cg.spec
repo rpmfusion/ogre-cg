@@ -15,7 +15,7 @@ BuildRequires:  zziplib-devel libXaw-devel libXrandr-devel libXxf86vm-devel
 BuildRequires:  autoconf automake libtool
 
 # We are building only plugin, so we need main lib
-BuildRequires:  ogre-devel = %{version}
+BuildRequires:  ogre-devel >= %{version}
 # Cg package
 BuildRequires:  Cg
 ExclusiveArch:  i686 x86_64
