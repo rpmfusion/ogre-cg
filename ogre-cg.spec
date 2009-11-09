@@ -1,6 +1,6 @@
 Name:           ogre-cg
 Version:        1.6.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Object-Oriented Graphics Rendering Engine
 License:        LGPLv2+
 Group:          System Environment/Libraries
@@ -20,7 +20,7 @@ BuildRequires:  ogre-devel >= %{version}
 BuildRequires:  Cg
 ExclusiveArch:  i686 x86_64
 
-Requires:       ogre = %{version}
+Requires:       ogre >= %{version}
 
 %description
 This package contains the OGRE CgProgramManager plugin.
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Nov 09 2009 Alexey Torkhov <atorkhov@gmail.com> - 1.6.1-4
+- Allow to install with any ogre version
+
 * Wed Sep 30 2009 Alexey Torkhov <atorkhov@gmail.com> - 1.6.1-3
 - Rebuild for F12
 
