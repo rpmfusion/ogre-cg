@@ -1,6 +1,6 @@
 Name:           ogre-cg
 Version:        1.6.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Object-Oriented Graphics Rendering Engine
 License:        LGPLv2+
 Group:          System Environment/Libraries
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 1.6.1-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Mon Nov 09 2009 Alexey Torkhov <atorkhov@gmail.com> - 1.6.1-4
 - Allow to install with any ogre version
 
